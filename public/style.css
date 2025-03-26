@@ -44,7 +44,6 @@ a {
 }
 
 .about-me-content {
-    text-align: left;
     padding: 0 50px;
     font-size: 2rem;
     margin: 0px 50px;
@@ -60,27 +59,20 @@ span {
 .container {
     border: 5px solid #C9B194;
     margin-top: 25px;
-    display: flex;
-    justify-content: space space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    
+    width: 100%; 
 }
 
 .item {
     margin: 20px;
-    width: 30%;
     padding: 20px;
-    text-align: center;
-    flex-wrap: wrap;
+    justify-items: center;
 }
 
 .placeholder {
-    width: 100%;
-}
-
-#third {
-    margin-bottom: 50px;
+    width: 100%
 }
 
 body {
@@ -111,14 +103,15 @@ body {
         margin: 10px;
     }
     .container {
-        flex-direction: column;
-        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0px 10;
     }
     .placeholder {
         width: 100%;
     }
     .item {
-        margin: 0px;
+        margin: 15px;
         padding: 0px;
     }
 
@@ -127,7 +120,7 @@ body {
         margin-bottom: 15px;
     }
     .profile-pic {
-        width: 50%;
+        width: 100%;
     }
 
     .section {
