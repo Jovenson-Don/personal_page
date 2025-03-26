@@ -113,6 +113,7 @@ body {
     .item {
         margin: 15px;
         padding: 0px;
+        justify-items: center;
     }
 
     .about-me-content{
