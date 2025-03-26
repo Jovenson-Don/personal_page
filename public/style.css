@@ -112,7 +112,7 @@ body {
     }
     .container {
         flex-direction: column;
-        margin: 0px;
+        margin-top: 10px;
     }
     .placeholder {
         width: 100%;
@@ -123,10 +123,15 @@ body {
     }
 
     .about-me-content{
-        font-size: x-large;
+        font-size: small;
         margin-bottom: 15px;
     }
     .profile-pic {
-        width: 100%;
+        width: 50%;
+    }
+
+    .section {
+        font-size: small;
+        text-align: left;
     }
 } 
