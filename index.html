@@ -4,142 +4,208 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joey Don · UGC Creator</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ==============================
-       NAV
-  ============================== -->
+  <!-- ── NAV ── -->
   <nav>
-    <div class="logo">Joey Don</div>
-    <div class="nav-socials">
-      <a href="https://www.tiktok.com/@iamjoeydon" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-        TikTok 1
-      </a>
-      <a href="https://www.tiktok.com/@iamjoeydon2" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-        TikTok 2
-      </a>
-      <a href="https://www.instagram.com/iamjoeydon" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-        Instagram
-      </a>
-      <a href="https://www.facebook.com/iamjoeydon" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        Facebook
-      </a>
-      <a href="https://www.youtube.com/@joeydon" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-        YouTube
-      </a>
+    <div class="logo">Joey<span>.</span>Don</div>
+    <div class="nav-right">
+      <div class="nav-socials">
+        <a href="https://www.tiktok.com/@iamjoeydon" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          TikTok 1
+        </a>
+        <a href="https://www.tiktok.com/@iamjoeydon2" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          TikTok 2
+        </a>
+        <a href="https://www.instagram.com/iamjoeydon" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/iamjoeydon" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.youtube.com/@joeydon" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          YouTube
+        </a>
+      </div>
+      <a href="https://cjet.me/joeydon" class="nav-cta" target="_blank">Let's work →</a>
     </div>
   </nav>
 
-  <!-- ==============================
-       HERO
-  ============================== -->
+  <!-- ── HERO ── -->
   <div class="hero">
-
-    <!-- Left: text + CTA -->
     <div class="hero-text">
-      <div class="badge">UGC Creator</div>
-      <h1>Turning real-life moments <em>into relatable content brands can trust.</em></h1>
-      <p>UGC creator producing relatable lifestyle, parenting, anime, and everyday content that feels natural, engaging, and built for social media.</p>
-      <a href="https://cjet.me/joeydon" class="contact-btn" target="_blank">Get in touch</a>
+      <div class="hero-eyebrow">
+        <div class="pulse-dot"></div>
+        <div class="eyebrow-text">Available for brand deals</div>
+      </div>
+      <h1>
+        Real content.<br>
+        <span class="line-accent">Real people.</span><br>
+        Real <span class="highlight">results.</span>
+      </h1>
+      <p class="hero-sub">UGC creator making relatable lifestyle, work humor, parenting, gaming, and anime content that actually converts — not just scrolled past.</p>
+      <div class="hero-actions">
+        <a href="https://cjet.me/joeydon" class="btn-primary" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Work with me
+        </a>
+        <a href="#portfolio" class="btn-ghost">See my work</a>
+      </div>
     </div>
 
-    <!-- Right: photos -->
-    <div class="bodyshot-area">
-      <div class="bodyshot-frame">
-        <img src="public/images/b1.jpg" alt="Joey Don" />
-      </div>
-      <div class="bodyshot-frame">
-        <img src="public/images/b2.jpg" alt="Joey Don" />
+    <div class="hero-photos">
+      <div class="photos-stack">
+        <div class="photo-col">
+          <div class="photo-frame">
+            <img src="public/images/b1.jpg" alt="Joey Don" />
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 
-  <!-- ==============================
-       VIDEO PORTFOLIO
-  ============================== -->
-  <div class="section">
-    <div class="section-label">Content Portfolio — Short Form Video</div>
+  <!-- ── CONTENT TYPES BAR ── -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-label">Content I deliver</div>
+    </div>
+    <div class="stat-divider">·</div>
+    <div class="stat"><div class="stat-type">Talking Head</div></div>
+    <div class="stat-divider">·</div>
+    <div class="stat"><div class="stat-type">Skit / Comedy</div></div>
+    <div class="stat-divider">·</div>
+    <div class="stat"><div class="stat-type">Voiceover</div></div>
+    <div class="stat-divider">·</div>
+    <div class="stat"><div class="stat-type">POV Style</div></div>
+    <div class="stat-divider">·</div>
+    <div class="stat"><div class="stat-type">Unboxing / Review</div></div>
+    <div class="stat-divider">·</div>
+    <div class="stat"><div class="stat-type">Storytime</div></div>
+  </div>
+
+  <!-- ── PITCH ── -->
+  <div class="pitch" id="about">
+    <div class="pitch-left">
+      <div class="section-label" style="margin-bottom:0.8rem;">Why brands choose me</div>
+      <h2>Content that <em>feels</em> native to the feed</h2>
+      <p>I don't make ads. I make moments people share, save, and act on. My audience trusts me because I'm one of them — a real person with a real routine, real opinions, and a real camera.</p>
+    </div>
+    <div class="pitch-cards">
+      <div class="pitch-card">
+        <div class="pitch-card-icon">🎯</div>
+        <h3>Authentic Voice</h3>
+        <p>No stiff scripts. Every piece of content sounds like me — because it is.</p>
+      </div>
+      <div class="pitch-card">
+        <div class="pitch-card-icon">📱</div>
+        <h3>Platform Native</h3>
+        <p>TikTok, Reels, Shorts — I know what stops the scroll on each one.</p>
+      </div>
+      <div class="pitch-card">
+        <div class="pitch-card-icon">⚡</div>
+        <h3>Fast Turnaround</h3>
+        <p>Quick production, clean delivery, and open to revision notes.</p>
+      </div>
+      <div class="pitch-card">
+        <div class="pitch-card-icon">🤝</div>
+        <h3>Easy to Work With</h3>
+        <p>Clear communication, no drama, and I actually read the brief.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VIDEO PORTFOLIO ── -->
+  <div class="section" id="portfolio">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Content Portfolio</div>
+        <div class="section-title">Short Form Video</div>
+      </div>
+    </div>
 
     <div class="video-grid">
-
-      <!-- Video 1: real MP4 -->
       <div class="video-card" style="padding:0;">
-        <video controls style="width:100%; height:100%; border-radius:10px; object-fit:cover;">
+        <div class="video-badge">Reading.com</div>
+        <video controls style="width:100%;height:100%;object-fit:cover;border-radius:14px;">
           <source src="public/videos/readingcom.mp4" type="video/mp4">
         </video>
       </div>
-
-      <!-- Videos 2–4: placeholders (swap with <video> or TikTok embed) -->
-        <div class="video-card" style="padding:0;">
-          <video controls style="width:100%; height:100%; border-radius:10px; object-fit:cover;">
-            <source src="public/videos/readingcom2.mp4" type="video/mp4">
-          </video>
-        </div>
-      <div class="video-card">
-        <div class="play-btn"><div class="tri"></div></div>
-        <div class="video-label">Video 3</div>
+      <div class="video-card" style="padding:0;">
+        <div class="video-badge">Reading.com</div>
+        <video controls style="width:100%;height:100%;object-fit:cover;border-radius:14px;">
+          <source src="public/videos/readingcom2.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="video-card">
         <div class="play-btn"><div class="tri"></div></div>
-        <div class="video-label">Video 4</div>
+        <div class="video-label">Coming soon</div>
       </div>
-
+      <div class="video-card">
+        <div class="play-btn"><div class="tri"></div></div>
+        <div class="video-label">Coming soon</div>
+      </div>
     </div>
 
-    <!-- Niche tags -->
     <div class="niche-row">
-      <div class="niche-tag accent">Work humor</div>
-      <div class="niche-tag accent">Parenting</div>
-      <div class="niche-tag accent">Gaming</div>
-      <div class="niche-tag accent">Anime</div>
-      <div class="niche-tag accent">Relatable content</div>
-      <div class="niche-tag accent">Lifestyle</div>
-      <div class="niche-tag accent">Product reviews</div>
-      <div class="niche-tag accent">TikTok · Reels · Shorts</div>
+      <div class="niche-tag">Work humor</div>
+      <div class="niche-tag">Parenting</div>
+      <div class="niche-tag">Gaming</div>
+      <div class="niche-tag">Anime</div>
+      <div class="niche-tag">Relatable content</div>
+      <div class="niche-tag">Lifestyle</div>
+      <div class="niche-tag">Product reviews</div>
+      <div class="niche-tag">TikTok · Reels · Shorts</div>
     </div>
   </div>
 
-  <!-- ==============================
-       BRANDS I'VE WORKED WITH
-  ============================== -->
-  <div class="brands-section">
+  <!-- ── BRANDS ── -->
+  <div class="brands-section" id="brands">
     <div class="section-label">Brands I've Worked With</div>
+    <div class="section-title" style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;margin-top:0.3rem;margin-bottom:0;">Past partners & collaborations</div>
 
     <div class="brands-grid">
-
-      <!--
-        HOW TO ADD A BRAND:
-        1. Replace the <svg> inside .brand-logo-placeholder with:
-           <img src="brand-logo.png" alt="Brand Name" />
-        2. Update the .brand-name text
-        3. Add style="border:none;" to .brand-logo-placeholder
-        4. Duplicate this block to add more brands
-      -->
-
       <a href="https://www.reading.com" target="_blank" class="brand-card">
-        <div class="brand-logo-placeholder" style="border: none; background: none;">
+        <div class="brand-logo-placeholder">
           <img src="public/images/readingcom_logo.jpeg" alt="Reading.com" />
         </div>
-        <div class="brand-name">Reading.com</div>
+        <div class="brand-info">
+          <div class="brand-name">Reading.com</div>
+          <div class="brand-category">EdTech · Kids Literacy</div>
+        </div>
       </a>
+      <!-- Add more brand cards here -->
+      <div class="brand-card empty">
+        <div class="brand-logo-placeholder" style="background:transparent;border:1.5px dashed #ddd;">
+          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:#ccc;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        </div>
+        <div class="brand-info">
+          <div class="brand-name">Your brand here</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ==============================
-       FOOTER
-  ============================== -->
-  <footer>
-    <div class="footer-name">Joey Don · <span>UGC Creator</span></div>
+  <!-- ── CTA ── -->
+  <div class="cta-section">
+    <h2>Let's make something<br><span>they can't ignore.</span></h2>
+    <p>Ready to create content your audience actually wants to watch? Let's talk rates, deliverables, and timelines.</p>
+    <a href="https://cjet.me/joeydon" class="cta-btn" target="_blank">
+      Start the conversation →
+    </a>
+    <div class="cta-email">or drop me a line at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="553c34383f3a302c313a3b153a2021393a3a3e7b363a38">[email&#160;protected]</a></div>
+  </div>
 
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-name">Joey<span>.</span>Don · UGC Creator</div>
     <div class="footer-links">
       <a href="https://www.tiktok.com/@iamjoeydon" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
@@ -161,14 +227,5 @@
         <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
         YouTube
       </a>
-      <a href="mailto:iamjoeydon@outlook.com">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        Email
-      </a>
-    </div>
-
-    <div class="footer-copy">© 2026 Joey Don · All rights reserved</div>
-  </footer>
-
-</body>
-</html>
+      <a href="/cdn-cgi/l/email-protection#e58c84888f8a809c818a8ba58a9091898a8a8ecb868a88">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-
