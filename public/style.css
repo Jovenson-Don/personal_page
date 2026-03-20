@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--white);
   color: var(--black);
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
   font-size: 15px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -37,7 +37,7 @@ nav {
 }
 
 .logo {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--white);
@@ -131,7 +131,7 @@ nav {
 }
 
 .eyebrow-text {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -140,7 +140,7 @@ nav {
 }
 
 .hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: clamp(3rem, 5.5vw, 5.2rem);
   font-weight: 800;
   line-height: 1.0;
@@ -315,7 +315,7 @@ nav {
 }
 
 .stat-type {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: white;
@@ -341,7 +341,7 @@ nav {
 }
 
 .pitch-left h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800;
   line-height: 1.1;
@@ -393,7 +393,7 @@ nav {
 }
 
 .pitch-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 0.4rem;
@@ -421,7 +421,7 @@ nav {
 }
 
 .section-label {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -430,7 +430,7 @@ nav {
 }
 
 .section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -576,7 +576,7 @@ nav {
 
 .brand-info {}
 .brand-name {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--black);
@@ -618,7 +618,7 @@ nav {
 }
 
 .cta-section h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: clamp(2.4rem, 5vw, 4.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -651,7 +651,7 @@ nav {
   color: white;
   padding: 1rem 2.4rem;
   border-radius: 999px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -683,7 +683,7 @@ footer {
 }
 
 .footer-name {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: rgba(255,255,255,0.5);
