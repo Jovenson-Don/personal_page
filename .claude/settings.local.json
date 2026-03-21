@@ -6,7 +6,17 @@
       "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
       "Bash(gh auth:*)",
       "Bash(gh pr:*)",
-      "Bash(ls \"C:\\\\Users\\\\Joey Don\\\\.claude\\\\projects\\\\C--Users-Joey-Don-Personal-Page\\\\memory\"\" 2>/dev/null && cat \"C:UsersJoey Don.claudeprojectsC--Users-Joey-Don-Personal-PagememoryMEMORY.md \")"
+      "Bash(ls \"C:\\\\Users\\\\Joey Don\\\\.claude\\\\projects\\\\C--Users-Joey-Don-Personal-Page\\\\memory\"\" 2>/dev/null && cat \"C:UsersJoey Don.claudeprojectsC--Users-Joey-Don-Personal-PagememoryMEMORY.md \")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where python:*)",
+      "Bash(where python3:*)",
+      "Bash(where node:*)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(taskkill /PID 31032 /F)",
+      "Bash(taskkill /PID 13188 /F)",
+      "Bash(taskkill //PID 31032 //F)",
+      "Bash(taskkill //PID 13188 //F)"
     ]
   }
 }
