@@ -528,6 +528,48 @@ nav {
 }
 .niche-tag:hover { background: var(--red); }
 
+/* ── RESULTS BLOCK ── */
+.results-block {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.results-note {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 640px;
+}
+
+.results-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.results-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── BRANDS ── */
 .brands-section {
   padding: 4rem 2.5rem;
