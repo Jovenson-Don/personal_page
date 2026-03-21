@@ -228,6 +228,7 @@ a.logo { text-decoration: none; }
   position: relative;
   overflow: hidden;
   z-index: 2;
+  margin-right: 1.5rem;
 }
 
 .hero-photos::before {
