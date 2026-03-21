@@ -36,6 +36,8 @@ nav {
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
+a.logo { text-decoration: none; }
+
 .logo {
   font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 1.1rem;
@@ -775,6 +777,17 @@ nav {
 .contact-email svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
 .contact-email a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
 .contact-email a:hover { color: white; }
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1.5rem;
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  transition: color 0.2s;
+}
+.back-link:hover { color: white; }
 
 .contact-right { position: relative; }
 
