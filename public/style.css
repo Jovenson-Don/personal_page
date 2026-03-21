@@ -85,7 +85,7 @@ a.logo { text-decoration: none; }
 .hero {
   min-height: 92vh;
   display: grid;
-  grid-template-columns: 1fr 460px;
+  grid-template-columns: 1fr 560px;
   background: var(--black);
   overflow: hidden;
   position: relative;
@@ -307,29 +307,44 @@ a.logo { text-decoration: none; }
   flex-wrap: wrap;
 }
 
-.stat { display: flex; align-items: center; }
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-number {
+  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  white-space: nowrap;
+  line-height: 1;
+}
 
 .stat-label {
   font-size: 10px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.6);
   white-space: nowrap;
-}
-
-.stat-type {
-  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: white;
-  white-space: nowrap;
-  letter-spacing: 0.02em;
 }
 
 .stat-divider {
   color: rgba(255,255,255,0.3);
   font-size: 16px;
   line-height: 1;
+}
+
+.stats-note {
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-top: 4px;
 }
 
 /* ── PITCH SECTION ── */
