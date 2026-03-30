@@ -56,7 +56,7 @@
   <div class="stats-bar">
     <span class="stat-item"><span class="stat-val">5.4K+</span> Total Followers</span>
     <span class="stat-dot">·</span>
-    <span class="stat-item"><span class="stat-val">47.2K</span> Avg Reel Views</span>
+    <span class="stat-item"><span class="stat-val">25%</span> Avg Instagram Engagement</span>
     <span class="stat-dot">·</span>
     <span class="stat-item"><span class="stat-val">11.79%</span> Avg TikTok Engagement</span>
     <span class="stat-dot">·</span>
@@ -104,30 +104,78 @@
       </div>
     </div>
 
+    <!-- ── FILTERS ── -->
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="readingcom">Reading.com</button>
+      <button class="filter-btn" data-filter="pitchbrand">PitchBrand</button>
+    </div>
+
     <div class="video-grid">
-      <div class="video-card" style="padding:0;">
-        <div class="video-badge">Reading.com</div>
-        <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;border-radius:14px;">
-          <source src="public/videos/readingcom.mp4" type="video/mp4">
-        </video>
+      <div class="video-card" data-category="pitchbrand">
+        <div class="video-thumb">
+          <div class="video-badge">PitchBrand</div>
+          <video preload="none">
+            <source src="public/videos/pitchbrand.mov" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">PitchBrand</span>
+          <p>Talking head · Creator tools</p>
+        </div>
       </div>
-      <div class="video-card" style="padding:0;">
-        <div class="video-badge">Reading.com</div>
-        <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;border-radius:14px;">
-          <source src="public/videos/readingcom_2.mp4" type="video/mp4">
-        </video>
+      <div class="video-card" data-category="readingcom">
+        <div class="video-thumb">
+          <div class="video-badge">Reading.com</div>
+          <video preload="none">
+            <source src="public/videos/readingcom.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Reading.com</span>
+          <p>Talking head · EdTech promotion</p>
+        </div>
       </div>
-      <div class="video-card" style="padding:0;">
-        <div class="video-badge">Reading.com</div>
-        <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;border-radius:14px;">
-          <source src="public/videos/readingcom_3.mp4" type="video/mp4">
-        </video>
+      <div class="video-card" data-category="readingcom">
+        <div class="video-thumb">
+          <div class="video-badge">Reading.com</div>
+          <video preload="none">
+            <source src="public/videos/readingcom_2.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Reading.com</span>
+          <p>Skit style · Kids literacy</p>
+        </div>
       </div>
-      <div class="video-card" style="padding:0;">
-        <div class="video-badge">Reading.com</div>
-        <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;border-radius:14px;">
-          <source src="public/videos/readingcom_4.mp4" type="video/mp4">
-        </video>
+      <div class="video-card" data-category="readingcom">
+        <div class="video-thumb">
+          <div class="video-badge">Reading.com</div>
+          <video preload="none">
+            <source src="public/videos/readingcom_3.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Reading.com</span>
+          <p>POV style · Parent relatable</p>
+        </div>
+      </div>
+      <div class="video-card" data-category="readingcom">
+        <div class="video-thumb">
+          <div class="video-badge">Reading.com</div>
+          <video preload="none">
+            <source src="public/videos/readingcom_4.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">Reading.com</span>
+          <p>Voiceover · Product feature</p>
+        </div>
       </div>
     </div>
 
@@ -200,5 +248,29 @@
   <footer></footer>
 
   <script src="public/components.js"></script>
+  <script>
+    // Portfolio filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.video-card').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+        });
+      });
+    });
+
+    // Play overlay: click to show controls and play
+    document.querySelectorAll('.video-thumb').forEach(thumb => {
+      const overlay = thumb.querySelector('.play-overlay');
+      const video = thumb.querySelector('video');
+      overlay.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        video.setAttribute('controls', '');
+        video.play();
+      });
+    });
+  </script>
 </body>
 </html>
