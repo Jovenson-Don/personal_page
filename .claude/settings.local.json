@@ -16,7 +16,12 @@
       "Bash(taskkill /PID 31032 /F)",
       "Bash(taskkill /PID 13188 /F)",
       "Bash(taskkill //PID 31032 //F)",
-      "Bash(taskkill //PID 13188 //F)"
+      "Bash(taskkill //PID 13188 //F)",
+      "WebFetch(domain:pitchbrand.co)",
+      "Bash(curl -L \"https://pitchbrand.co/logo.png\" -o \"C:/Users/Joey Don/Personal_Page/public/images/logos/pitchbrand_logo.png\")",
+      "WebFetch(domain:ugcbobby.com)",
+      "WebFetch(domain:jovenson-don.github.io)",
+      "Bash(gh api:*)"
     ]
   }
 }
