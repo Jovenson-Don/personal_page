@@ -278,15 +278,33 @@
       });
     });
 
-    // Play overlay: click to show controls and play
-    document.querySelectorAll('.video-thumb').forEach(thumb => {
+    // Play overlay: click to show controls and play (only one video at a time)
+    const allThumbs = document.querySelectorAll('.video-thumb');
+
+    function stopVideo(thumb) {
+      const v = thumb.querySelector('video');
+      const o = thumb.querySelector('.play-overlay');
+      v.pause();
+      v.removeAttribute('controls');
+      o.style.display = '';
+    }
+
+    allThumbs.forEach(thumb => {
       const overlay = thumb.querySelector('.play-overlay');
       const video = thumb.querySelector('video');
+
       overlay.addEventListener('click', () => {
+        // Pause any other playing video
+        allThumbs.forEach(other => {
+          if (other !== thumb) stopVideo(other);
+        });
         overlay.style.display = 'none';
         video.setAttribute('controls', '');
         video.play();
       });
+
+      // Restore overlay when video ends
+      video.addEventListener('ended', () => stopVideo(thumb));
     });
   </script>
 </body>
