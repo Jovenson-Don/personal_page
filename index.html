@@ -126,13 +126,14 @@
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="readingcom">Reading.com</button>
       <button class="filter-btn" data-filter="pitchbrand">PitchBrand</button>
+      <button class="filter-btn" data-filter="bluevine">BlueVine</button>
     </div>
 
     <div class="video-grid">
       <div class="video-card" data-category="pitchbrand">
         <div class="video-thumb">
           <div class="video-badge">PitchBrand</div>
-          <video preload="none">
+          <video preload="metadata">
             <source src="public/videos/pitchbrand.mov" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -142,10 +143,23 @@
           <p>Talking head · Creator tools</p>
         </div>
       </div>
+      <div class="video-card" data-category="bluevine">
+        <div class="video-thumb">
+          <div class="video-badge">BlueVine</div>
+          <video preload="metadata">
+            <source src="public/videos/bluevine.mov" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-info">
+          <span class="video-tag">BlueVine</span>
+          <p>Affiliate · Small business finance</p>
+        </div>
+      </div>
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="none">
+          <video preload="metadata">
             <source src="public/videos/readingcom5.mov" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -158,7 +172,7 @@
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="none">
+          <video preload="metadata">
             <source src="public/videos/readingcom_2.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -171,7 +185,7 @@
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="none">
+          <video preload="metadata">
             <source src="public/videos/readingcom_3.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -184,7 +198,7 @@
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="none">
+          <video preload="metadata">
             <source src="public/videos/readingcom_4.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -257,6 +271,15 @@
           <div class="brand-category">Fintech · Small Business Banking</div>
         </div>
       </a>
+      <a href="https://inprintwetrust.co" target="_blank" rel="noopener noreferrer" class="brand-card">
+        <div class="brand-logo-placeholder">
+          <img src="public/images/logos/ipwt.jpeg" alt="In Print We Trust" />
+        </div>
+        <div class="brand-info">
+          <div class="brand-name">In Print We Trust</div>
+          <div class="brand-category">Streetwear · Print Culture</div>
+        </div>
+      </a>
       <!-- Add more brand cards here -->
       <div class="brand-card empty">
         <div class="brand-logo-placeholder" style="background:transparent;border:1.5px dashed #ddd;">
@@ -301,6 +324,11 @@
     allThumbs.forEach(thumb => {
       const overlay = thumb.querySelector('.play-overlay');
       const video = thumb.querySelector('video');
+
+      // Seek to first frame once metadata is ready
+      video.addEventListener('loadedmetadata', () => {
+        video.currentTime = 0.01;
+      });
 
       overlay.addEventListener('click', () => {
         // Pause any other playing video
