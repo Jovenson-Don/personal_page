@@ -1,5 +1,10 @@
 const NAV_HTML = `
   <a href="index.html" class="logo">Joey<span>.</span>Don</a>
+  <nav class="nav-links">
+    <a href="#portfolio">Work</a>
+    <a href="#about-me">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
   <div class="nav-right">
     <div class="nav-socials">
       <a href="https://www.tiktok.com/@iamjoeydon" target="_blank" rel="noopener noreferrer">
@@ -23,7 +28,7 @@ const NAV_HTML = `
         YouTube
       </a>
     </div>
-    <a href="contact.html" class="nav-cta">Let's work →</a>
+    <a href="#contact" class="nav-cta">Let's work →</a>
   </div>
 `;
 

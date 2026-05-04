@@ -1,1 +1,7 @@
 .claude/
+node_modules/
+package-lock.json
+package.json
+public/images/photos/*.bak.jpg
+public/images/photos/joey_don_2_cropped.jpg
+public/images/photos/joey_don_2_original.jpg
