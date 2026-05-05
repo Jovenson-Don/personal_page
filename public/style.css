@@ -331,8 +331,8 @@ a.logo { text-decoration: none; }
 .section-divider {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--taupe), transparent);
-  opacity: 0.5;
-  margin: 0 2.5rem;
+  opacity: 0.75;
+  margin: 2rem 2.5rem;
 }
 
 /* ── ABOUT SECTION ── */
