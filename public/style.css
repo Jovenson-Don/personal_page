@@ -81,12 +81,10 @@ a.logo { text-decoration: none; }
 }
 .logo span { color: var(--black); }
 
-.nav-right { display: flex; align-items: center; gap: 2rem; }
-
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .nav-links a {
@@ -99,25 +97,6 @@ a.logo { text-decoration: none; }
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--black); }
-
-.nav-socials {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.nav-socials a {
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: color 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.nav-socials a:hover { color: var(--black); }
-.nav-socials svg { width: 12px; height: 12px; fill: currentColor; }
 
 .nav-cta {
   background: var(--black);
@@ -321,6 +300,20 @@ a.logo { text-decoration: none; }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-init.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init { opacity: 1; transform: none; transition: none; }
 }
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -757,7 +750,7 @@ a.logo { text-decoration: none; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
 }
 
 .pitch-left h2 {
@@ -928,8 +921,8 @@ a.logo { text-decoration: none; }
 }
 
 .brands-headline {
-  font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
   color: var(--black);
   line-height: 1.2;
@@ -1311,8 +1304,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav { padding: 1rem 1.2rem; }
-  .nav-socials { display: none; }
+  nav { padding: 1rem 1.2rem; gap: 0.8rem; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 11px; letter-spacing: 0.06em; }
+  .nav-cta { padding: 0.45rem 0.9rem; font-size: 11px; }
 
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-text { padding: 3rem 1.5rem 2rem; order: 1; }
@@ -1352,6 +1347,8 @@ footer {
 }
 
 @media (max-width: 480px) {
+  /* Contact link covers the same action — drop the CTA so nav fits one row */
+  .nav-cta { display: none; }
   .hero-text { padding: 2rem 1.2rem 1.5rem; }
   .hero-photos { height: 280px; }
   .about-photo { height: 280px; width: 100%; aspect-ratio: unset; }

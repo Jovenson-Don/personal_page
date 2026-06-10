@@ -83,7 +83,7 @@
       <div class="video-card" data-category="bluevine">
         <div class="video-thumb">
           <div class="video-badge">BlueVine</div>
-          <video preload="auto" muted playsinline poster="public/images/posters/bluevine2.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/bluevine2.jpg">
             <source src="public/videos/bluevine2.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -96,7 +96,7 @@
       <div class="video-card" data-category="timelessjump">
         <div class="video-thumb">
           <div class="video-badge">Timeless Jump</div>
-          <video preload="auto" muted playsinline poster="public/images/posters/timelessjump.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/timelessjump.jpg">
             <source src="public/videos/timelessjump.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -109,7 +109,7 @@
       <div class="video-card" data-category="keepertax">
         <div class="video-thumb">
           <div class="video-badge">Keeper Tax</div>
-          <video preload="auto" muted playsinline poster="public/images/posters/keeper_1.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/keeper_1.jpg">
             <source src="public/videos/keeper_1.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -122,7 +122,7 @@
       <div class="video-card" data-category="keepertax">
         <div class="video-thumb">
           <div class="video-badge">Keeper Tax</div>
-          <video preload="auto" muted playsinline poster="public/images/posters/keeper_2.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/keeper_2.jpg">
             <source src="public/videos/keeper_2.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -135,7 +135,7 @@
       <div class="video-card" data-category="pitchbrand">
         <div class="video-thumb">
           <div class="video-badge">PitchBrand</div>
-          <video preload="auto" muted playsinline poster="public/images/posters/pitchbrand.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/pitchbrand.jpg">
             <source src="public/videos/pitchbrand.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -148,7 +148,7 @@
       <div class="video-card" data-category="bluevine">
         <div class="video-thumb">
           <div class="video-badge">BlueVine</div>
-          <video preload="auto" muted playsinline poster="public/images/posters/bluevine.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/bluevine.jpg">
             <source src="public/videos/bluevine.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -174,7 +174,7 @@
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="auto" muted playsinline poster="public/images/posters/readingcom5.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/readingcom5.jpg">
             <source src="public/videos/readingcom5.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -187,7 +187,7 @@
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="metadata" poster="public/images/posters/readingcom_2.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/readingcom_2.jpg">
             <source src="public/videos/readingcom_2.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -200,7 +200,7 @@
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="metadata" poster="public/images/posters/readingcom_3.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/readingcom_3.jpg">
             <source src="public/videos/readingcom_3.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -213,7 +213,7 @@
       <div class="video-card" data-category="readingcom">
         <div class="video-thumb">
           <div class="video-badge">Reading.com</div>
-          <video preload="metadata" poster="public/images/posters/readingcom_4.jpg">
+          <video preload="metadata" muted playsinline poster="public/images/posters/readingcom_4.jpg">
             <source src="public/videos/readingcom_4.mp4" type="video/mp4">
           </video>
           <div class="play-overlay"><div class="play-circle">▶</div></div>
@@ -305,7 +305,7 @@
         <img src="public/images/logos/jlab.svg" alt="JLab" />
       </a>
       <a href="https://www.mrktedge.ai" target="_blank" rel="noopener noreferrer" class="brand-logo-item">
-        <img src="public/images/logos/mrktedge.png" alt="MrktEdge" style="filter: invert(1);" />
+        <img src="public/images/logos/mrktedge.png" alt="MrktEdge" style="height: 30px;" />
       </a>
       <a href="https://www.timelessjump.com" target="_blank" rel="noopener noreferrer" class="brand-logo-item" style="gap: 0.05rem;">
         <img src="public/images/logos/timelessjump.png" alt="Timeless Jump" style="filter: invert(1); height: 36px; width: 36px;" />
@@ -405,11 +405,6 @@
       const overlay = thumb.querySelector('.play-overlay');
       const video = thumb.querySelector('video');
 
-      // Seek to first frame once metadata is ready
-      video.addEventListener('loadedmetadata', () => {
-        video.currentTime = 0.01;
-      });
-
       overlay.addEventListener('click', () => {
         // Pause any other playing video
         allThumbs.forEach(other => {
@@ -422,6 +417,29 @@
 
       // Restore overlay when video ends
       video.addEventListener('ended', () => stopVideo(thumb));
+    });
+
+    // Scroll reveal (progressive enhancement — nothing hidden if JS fails)
+    const revealTargets = document.querySelectorAll(
+      '.video-card, .testimonial-card, .brand-logo-item, .about-photo, .about-text, .pitch-left, .pitch-right, .section-header, .brands-headline, .testimonials-heading'
+    );
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+          // Hand transitions back to normal hover styles once the reveal finishes
+          setTimeout(() => {
+            entry.target.classList.remove('reveal-init', 'revealed');
+            entry.target.style.transitionDelay = '';
+          }, 1000);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach((el, i) => {
+      el.classList.add('reveal-init');
+      el.style.transitionDelay = `${(i % 4) * 70}ms`;
+      observer.observe(el);
     });
 
     // Contact form
