@@ -409,7 +409,7 @@ a.logo { text-decoration: none; }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem 2rem;
   flex-wrap: wrap;
   font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
   font-size: 11px;
@@ -425,7 +425,9 @@ a.logo { text-decoration: none; }
   font-size: 13px;
 }
 
-.stat-dot { color: rgba(255,255,255,0.45); }
+/* Separator dots are fragile when the row wraps (they dangle at line
+   ends), so hide them and rely on the flex gap for separation. */
+.stat-dot { display: none; }
 
 .stat-item { white-space: nowrap; }
 
