@@ -502,10 +502,34 @@ a.logo { text-decoration: none; }
 }
 
 /* ── VIDEO GRID — PHONE MOCKUP STYLE ── */
+/* Cap and center the portfolio content as one unit so header, filters,
+   and grid stay aligned while cards stay a touch smaller on wide screens. */
+#portfolio .section-header,
+#portfolio .portfolio-filters,
+.video-grid {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the title and filter row */
+#portfolio .section-header { justify-content: center; text-align: center; }
+#portfolio .portfolio-filters { justify-content: center; }
+
 .video-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+
+/* Wide desktop: eight per row in a wider column so the space fills out */
+@media (min-width: 1200px) {
+  #portfolio .section-header,
+  #portfolio .portfolio-filters,
+  .video-grid {
+    max-width: 1800px;
+  }
+  .video-grid { grid-template-columns: repeat(8, 1fr); }
 }
 
 .video-card {
@@ -568,9 +592,6 @@ a.logo { text-decoration: none; }
   object-fit: cover;
   display: block;
 }
-
-.video-thumb video:-webkit-full-screen { object-fit: contain; }
-.video-thumb video:fullscreen { object-fit: contain; }
 
 .play-overlay {
   position: absolute;

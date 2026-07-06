@@ -526,6 +526,10 @@
       const overlay = thumb.querySelector('.play-overlay');
       const video = thumb.querySelector('video');
 
+      // Play inline within the card — no fullscreen / picture-in-picture
+      video.setAttribute('controlsList', 'nofullscreen noremoteplayback');
+      video.disablePictureInPicture = true;
+
       overlay.addEventListener('click', () => {
         // Pause any other playing video
         allThumbs.forEach(other => {
@@ -533,6 +537,8 @@
         });
         overlay.style.display = 'none';
         video.setAttribute('controls', '');
+        video.muted = false;
+        video.volume = 1;
         video.play();
       });
 
