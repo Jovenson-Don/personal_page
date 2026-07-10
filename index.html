@@ -376,8 +376,9 @@
 
   <!-- ── TESTIMONIALS ── -->
   <div class="testimonials-section">
-    <div class="testimonials-heading">What brands say</div>
-    <div class="testimonials-grid">
+    <div class="testimonials-heading">What brands say:</div>
+    <div class="testimonials-carousel">
+      <div class="testimonials-track" id="testimonials-track">
       <div class="testimonial-card">
         <div class="testimonial-quote">"Joey made an awesome skit style UGC video for PitchBrand. He had fast turnaround, great communication, and produced a sharp ad angle that we're excited to test. Definitely recommend!"</div>
         <div class="testimonial-author">
@@ -428,7 +429,7 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-card featured">
+      <div class="testimonial-card wide">
         <div class="testimonial-quote">"Joey brought real creative firepower to the launch of our new Fuser feature. He built a custom UGC rate calculator and created sharp, high-energy content that made the tool instantly understandable and exciting to use. He moved fast, got the product immediately, and delivered everything ahead of schedule without compromising on quality. The final content felt native to the platform, visually strong, and genuinely useful.<br><br>Collaborative and easy to work with. Joey knows how to turn a product feature into something people actually want to engage with."</div>
         <div class="testimonial-author">
           <div class="testimonial-avatar">F</div>
@@ -437,6 +438,7 @@
             <div class="testimonial-role">Head of Partnerships, Fuser</div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -620,7 +622,7 @@
 
     // Scroll reveal (progressive enhancement — nothing hidden if JS fails)
     const revealTargets = document.querySelectorAll(
-      '.video-card, .testimonial-card, .brand-logo-item, .about-photo, .about-text, .pitch-left, .pitch-right, .section-header, .brands-headline, .testimonials-heading'
+      '.video-card, .brand-logo-item, .about-photo, .about-text, .pitch-left, .pitch-right, .section-header, .brands-headline, .testimonials-heading'
     );
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -640,6 +642,28 @@
       el.style.transitionDelay = `${(i % 4) * 70}ms`;
       observer.observe(el);
     });
+
+    // Testimonials continuous marquee (clone cards for a seamless loop)
+    const tTrack = document.getElementById('testimonials-track');
+    if (tTrack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const GAP = 20;         // must match the CSS gap
+      const SPEED = 55;       // pixels per second
+      const originals = Array.from(tTrack.children);
+      originals.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.tabIndex = -1;
+        tTrack.appendChild(clone);
+      });
+      const setMotion = () => {
+        // Width of one full set of cards, including the gap that follows it
+        const shift = originals.reduce((w, c) => w + c.offsetWidth, 0) + GAP * originals.length;
+        tTrack.style.setProperty('--marquee-shift', shift + 'px');
+        tTrack.style.animationDuration = (shift / SPEED) + 's';
+      };
+      setMotion();
+      window.addEventListener('resize', setMotion);
+    }
 
     // Contact form
     const form = document.getElementById('contact-form');
